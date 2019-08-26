@@ -14,12 +14,12 @@
     </head>
     <body>
         <div class="container mt-4 col-lg-4">
-            <div class="card">
-                <div class="card-body text-center">
-                    <form>
-                        <div class="form-group">
-                            <h3>Login</h3>
+            <div class="card col-sm-12">
+                <div class="card-body">
+                    <form class="form-sign" action="Validar" method="POST">
+                        <div class="form-group text-center">
                             <img src="img/info_logo.png" alt="70" width="170"/>
+                            <h3>Login</h3>
                             <p>Bienvenidos al Sistema</p>
                         </div>
                         <div class="form-group">
@@ -28,9 +28,9 @@
                         </div>
                         <div class="form-group">
                             <label>Password:</label>
-                            <input type="password" name="txtpassword" class="form-control">
+                            <input type="password" name="txtpass" class="form-control">
                         </div>
-                        <input type="submit" name="action" value="ingresar" class="btn btn-primary">
+                        <input type="submit" name="accion" value="Ingresar" class="btn btn-primary btn-block">
                     </form>
                 </div>
             </div>
