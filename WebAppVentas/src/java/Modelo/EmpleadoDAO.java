@@ -22,7 +22,7 @@ public class EmpleadoDAO {
     
     public Empleado validar(String user, String dni) {
         Empleado em = new Empleado();
-        String sql = "select * from empleado where USER=? and DNI=?";
+        String sql = "select * from empleado where user=? and dni=?";
         try {
             con = cn.Conexion();
             ps=con.prepareStatement(sql);
@@ -30,8 +30,11 @@ public class EmpleadoDAO {
             ps.setString(2, dni);
             rs = ps.executeQuery();
             while(rs.next()){
-                em.setUser(rs.getString("USER"));
-                em.setDni(rs.getString("DNI"));
+                em.setId(rs.getInt("id_empleado"));
+                em.setUser(rs.getString("user"));
+                em.setDni(rs.getString("dni"));
+                em.setNom(rs.getString("nombres"));
+                        
             }
         } catch (Exception e){
         }
